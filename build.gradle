@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+group = 'com.loobo'
+version = '1.0-SNAPSHOT'
+
+description = """A custom project"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'org.springframework', name: 'spring-context', version:'4.2.3.RELEASE'
+    compile 'org.springframework:spring-jdbc:4.2.3.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version:'4.2.3.RELEASE'
+    compile 'mysql:mysql-connector-java:5.1.38'
+    compile 'commons-dbcp:commons-dbcp:1.4'
+    testCompile group: 'junit', name: 'junit', version:'4.12'
+    testCompile group: 'com.github.stefanbirkner', name: 'system-rules', version:'1.15.0'
+    testCompile group: 'org.springframework', name: 'spring-test', version:'4.2.3.RELEASE'
+}
